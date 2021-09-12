@@ -11,6 +11,8 @@ import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 
+import org.webrtc.Logging;
+
 public class MainActivity extends AppCompatActivity {
     EditText et_room;
     @Override
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         //                String folder = diskPath + File.separatorChar + "logger";
 //        Logger.addLogAdapter(new DiskLogAdapter());
 
+//        Logging.enableLogToDebugOutput(Logging.Severity.LS_VERBOSE);
 
         et_room = findViewById(R.id.et_room);
     }
