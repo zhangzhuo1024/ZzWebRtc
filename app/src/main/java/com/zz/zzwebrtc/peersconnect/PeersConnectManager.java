@@ -34,49 +34,41 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class PeersConnectManager {
+    private static final String AUDIO_ECHO_CANCELLATION_CONSTRAINT = "googEchoCancellation";    //    googEchoCancellation   回音消除
+    private static final String AUDIO_NOISE_SUPPRESSION_CONSTRAINT = "googNoiseSuppression";    //    googNoiseSuppression   噪声抑制
+    private static final String AUDIO_AUTO_GAIN_CONTROL_CONSTRAINT = "googAutoGainControl";    //    googAutoGainControl    自动增益控制
+    private static final String AUDIO_HIGH_PASS_FILTER_CONSTRAINT = "googHighpassFilter";    //    googHighpassFilter     高通滤波器
     private ArrayList<PeerConnection.IceServer> ICEServers;
     private ArrayList<PeerConnection.IceServer> ICEServerList;
+    private ArrayList<String> mConnectionIdList;
     private HashMap<String, Peer> mConnectionIdPeerMap;
-    private EglBase mEglBase;
-    ExecutorService executorService;
-    PeerConnectionFactory factory;
+    private WebSocketManager webSocketManager;
+    private ExecutorService executorService;
+    private PeerConnectionFactory factory;
     private ChatRoomActivity mContext;
     private MediaStream mediaStream;
-
-    //    googEchoCancellation   回音消除
-    private static final String AUDIO_ECHO_CANCELLATION_CONSTRAINT = "googEchoCancellation";
-    //
-    //    googNoiseSuppression   噪声抑制
-    private static final String AUDIO_NOISE_SUPPRESSION_CONSTRAINT = "googNoiseSuppression";
-
-    //    googAutoGainControl    自动增益控制
-    private static final String AUDIO_AUTO_GAIN_CONTROL_CONSTRAINT = "googAutoGainControl";
-    //    googHighpassFilter     高通滤波器
-    private static final String AUDIO_HIGH_PASS_FILTER_CONSTRAINT = "googHighpassFilter";
-    private boolean isVideoEnable;
+    private EglBase mEglBase;
     private String myId;
-    private ArrayList<String> mConnectionIdList;
-    private WebSocketManager webSocketManager;
+    private boolean isVideoEnable;
+    private Role role;
+    private AudioSource audioSource;
+    private VideoSource videoSource;
+    private VideoCapturer videoCapturer;
 
+    enum Role {Caller, Receiver}
 
     public PeersConnectManager() {
         executorService = Executors.newSingleThreadExecutor();
         mConnectionIdList = new ArrayList<>();
         mConnectionIdPeerMap = new HashMap<String, Peer>();
-//        ICEServerList = new ArrayList<>();
-//        PeerConnection.IceServer iceServer = PeerConnection.IceServer
-//                .builder("turn:116.62.66.154:3478:?transport=udp")
-//                .setUsername("zz")
-//                .setPassword("123456")
-//                .createIceServer();
-//        ICEServerList.add(iceServer);
         ICEServers = new ArrayList<>();
-        PeerConnection.IceServer iceServer1 = PeerConnection.IceServer.builder("turn:116.62.66.154:3478?transport=udp")
-                .setUsername("zz").setPassword("123456").createIceServer();
-
+        PeerConnection.IceServer iceServer1 = PeerConnection.IceServer
+                .builder("turn:116.62.66.154:3478?transport=udp")
+                .setUsername("zz")
+                .setPassword("123456")
+                .createIceServer();
         ICEServers.add(iceServer1);
     }
-
 
     public void initContext(ChatRoomActivity chatRoomActivity, EglBase rootEglBase) {
         mContext = chatRoomActivity;
@@ -113,8 +105,60 @@ public class PeersConnectManager {
         });
     }
 
+    public void closePeerConnection() {
+        executorService.execute(() -> {
+            if (null != mConnectionIdPeerMap) {
+                for (String s : mConnectionIdPeerMap.keySet()) {
+                    Peer peer = mConnectionIdPeerMap.get(s);
+                    if (peer != null) {
+                        PeerConnection connection = peer.peerConnection;
+                        if (connection != null) {
+                            connection.close();
+                            connection.dispose();            //关闭peerconnecttion连接
+                        }
+                    } else {
+                        Logger.e("peers===null");
+                    }
+                }
+                mConnectionIdPeerMap.clear();
+                if (null != audioSource) {//释放音频资源
+                    audioSource.dispose();
+                    audioSource = null;
+                }
+                if (null != videoSource) {//释放视频资源
+                    videoSource.dispose();
+                    videoSource = null;
+                }
+                if (videoCapturer != null) {//释放画面
+                    try {
+                        videoCapturer.stopCapture();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    videoCapturer.dispose();
+                    videoCapturer = null;
+                }
+
+                if (mediaStream != null) {
+                    mediaStream.dispose();
+                    mediaStream = null;
+                }
+                if (mEglBase != null) {
+                    mEglBase.release();
+                    mEglBase = null;
+                }
+                if (null != factory) {//释放掉PeerConnecttionFactroy
+                    factory.stopAecDump();
+                    factory.dispose();
+                    factory = null;
+                }
+            }
+        });
+    }
+
     private void sendOffers() {
         for (Map.Entry<String, Peer> stringPeerEntry : mConnectionIdPeerMap.entrySet()) {
+            role = Role.Caller;
             Peer peer = stringPeerEntry.getValue();
             //给每个房间的人发送offer，结果在第一个参数peer中回调
             peer.peerConnection.createOffer(peer, offerAndAnswerConstraint());
@@ -154,14 +198,12 @@ public class PeersConnectManager {
                 new MediaConstraints.KeyValuePair(AUDIO_AUTO_GAIN_CONTROL_CONSTRAINT, "false"));
         audioConstraints.mandatory.add(
                 new MediaConstraints.KeyValuePair(AUDIO_HIGH_PASS_FILTER_CONSTRAINT, "true"));
-        AudioSource audioSource = factory.createAudioSource(audioConstraints);
+        audioSource = factory.createAudioSource(audioConstraints);
         AudioTrack audioTrack = factory.createAudioTrack("ARDAMSa0", audioSource);
         mediaStream.addTrack(audioTrack);
 
 
         if (isVideoEnable) {
-
-            VideoCapturer videoCapturer;
             if (Camera2Enumerator.isSupported(mContext)) {
                 Camera2Enumerator camera2Enumerator = new Camera2Enumerator(mContext);
                 videoCapturer = createCameraCapture(camera2Enumerator);
@@ -169,7 +211,7 @@ public class PeersConnectManager {
                 Camera1Enumerator enumerator = new Camera1Enumerator(true);
                 videoCapturer = createCameraCapture(enumerator);
             }
-            VideoSource videoSource = factory.createVideoSource(videoCapturer.isScreencast());
+            videoSource = factory.createVideoSource(videoCapturer.isScreencast());
             SurfaceTextureHelper surfaceTextureHelper = SurfaceTextureHelper.create("CaptureThread", mEglBase.getEglBaseContext());
             videoCapturer.initialize(surfaceTextureHelper, mContext, videoSource.getCapturerObserver());
             videoCapturer.startCapture(320, 240, 10);
@@ -211,7 +253,6 @@ public class PeersConnectManager {
     private PeerConnectionFactory createPeerConnectionFactory() {
 
         PeerConnectionFactory.initialize(PeerConnectionFactory.InitializationOptions.builder(mContext).createInitializationOptions());
-
         DefaultVideoEncoderFactory defaultVideoEncoderFactory = new DefaultVideoEncoderFactory(mEglBase.getEglBaseContext(), true, true);
         DefaultVideoDecoderFactory defaultVideoDecoderFactory = new DefaultVideoDecoderFactory(mEglBase.getEglBaseContext());
         JavaAudioDeviceModule audioDeviceModule = JavaAudioDeviceModule.builder(mContext).createAudioDeviceModule();
@@ -237,6 +278,26 @@ public class PeersConnectManager {
         });
     }
 
+    public void onRemoteIceCandidate(String socketId, IceCandidate iceCandidate) {
+        executorService.execute(() -> {
+            Peer peer = mConnectionIdPeerMap.get(socketId);
+            if (peer != null) {
+                peer.peerConnection.addIceCandidate(iceCandidate);
+            }
+        });
+    }
+
+    public void onReceiveOffer(String socketId, String sdp) {
+        executorService.execute(() -> {
+            role = Role.Receiver;
+            Peer peer = mConnectionIdPeerMap.get(socketId);
+            if (peer != null) {
+                SessionDescription sessionDescription = new SessionDescription(SessionDescription.Type.OFFER, sdp);
+                peer.peerConnection.setRemoteDescription(peer, sessionDescription);
+            }
+        });
+    }
+
     private class Peer implements SdpObserver, PeerConnection.Observer {
         private String userId;
         private PeerConnection peerConnection;
@@ -250,11 +311,8 @@ public class PeersConnectManager {
             if (factory == null) {
                 factory = createPeerConnectionFactory();
             }
-//        peerconnection  打洞  客户端 能 1 不能2
             PeerConnection.RTCConfiguration rtcConfiguration = new PeerConnection.RTCConfiguration(ICEServers);
-
             return factory.createPeerConnection(rtcConfiguration, this);
-
         }
 
         // SDP 回调  start
@@ -268,11 +326,20 @@ public class PeersConnectManager {
         public void onSetSuccess() {
             if (peerConnection.signalingState() == PeerConnection.SignalingState.HAVE_LOCAL_OFFER) {
                 Logger.e("HAVE_LOCAL_OFFER = ");
-                webSocketManager.sendOffer(userId, peerConnection.getLocalDescription().description);
+                if (role == Role.Caller) {
+                    webSocketManager.sendOffer(userId, peerConnection.getLocalDescription().description);
+                }
+                if (role == Role.Receiver) {
+                    webSocketManager.sendAnswer(userId, peerConnection.getLocalDescription().description);
+                }
             } else if (peerConnection.signalingState() == PeerConnection.SignalingState.HAVE_REMOTE_OFFER) {
                 Logger.e("HAVE_REMOTE_OFFER = ");
+                peerConnection.createAnswer(Peer.this, offerAndAnswerConstraint());
             } else if (peerConnection.signalingState() == PeerConnection.SignalingState.STABLE) {
                 Logger.e("STABLE = ");
+                if (role == Role.Receiver) {
+                    webSocketManager.sendAnswer(userId, peerConnection.getLocalDescription().description);
+                }
             }
         }
 

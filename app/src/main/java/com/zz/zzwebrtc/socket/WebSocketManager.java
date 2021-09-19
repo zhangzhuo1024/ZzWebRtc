@@ -68,18 +68,22 @@ public class WebSocketManager {
                 Logger.d("message = " + message);
                 Map map = JSON.parseObject(message, Map.class);
                 String eventName = (String) map.get("eventName");
+                //进入房间map.put("eventName", "__join")，收到此消息
                 if (eventName.equals("_peers")) {
                     handleMessage(map);
                 }
+                //给其他用户发sdp(map.put("eventName", "__offer")，他们回复sdp时收到此消息
                 if (eventName.equals("_answer")) {
                     handleAnswer(map);
                 }
-//                if (eventName.equals("_ice_candidate")) {
-//
-//                }
-//                if (eventName.equals("_offer")) {
-////                    handleOffer(map);
-//                }
+                //给其他用户发送ice，他们回复或者其他用户给自己发送ice，map.put("eventName", "__ice_candidate"); 收到此消息
+                if (eventName.equals("_ice_candidate")) {
+                    handleRemoteCandidate(map);
+                }
+                //后面进来的用户主动给自己发送的sdp
+                if (eventName.equals("_offer")) {
+                    handleOffer(map);
+                }
 
             }
 
@@ -106,6 +110,31 @@ public class WebSocketManager {
         }
         mWebSocketClient.setReuseAddr(true);
         mWebSocketClient.connect();
+    }
+
+    private void handleOffer(Map map) {
+        Map data = (Map) map.get("data");
+        Map sdpDic;
+        if (data != null) {
+            sdpDic = (Map) data.get("sdp");
+            String socketId = (String) data.get("socketId");
+            String sdp = (String) sdpDic.get("sdp");
+            mPeersConnectManager.onReceiveOffer(socketId, sdp);
+        }
+    }
+
+    private void handleRemoteCandidate(Map map) {
+        Map data = (Map) map.get("data");
+        String socketId;
+        if (data != null) {
+            socketId = (String) data.get("socketId");
+            String sdpMid = (String) data.get("id");
+            sdpMid = (null == sdpMid) ? "video" : sdpMid;
+            int sdpMLineIndex = (int) Double.parseDouble(String.valueOf(data.get("label")));
+            String candidate = (String) data.get("candidate");
+            IceCandidate iceCandidate = new IceCandidate(sdpMid, sdpMLineIndex, candidate);
+            mPeersConnectManager.onRemoteIceCandidate(socketId, iceCandidate);
+        }
     }
 
     private void handleAnswer(Map map) {
@@ -178,6 +207,22 @@ public class WebSocketManager {
         HashMap<String, Object> map = new HashMap();
         map.put("eventName", "__ice_candidate");
         map.put("data", childMap);
+        JSONObject object = new JSONObject(map);
+        String jsonString = object.toString();
+        Logger.json(jsonString);
+        mWebSocketClient.send(jsonString);
+    }
+
+    public void sendAnswer(String userId, String description) {
+        Map<String, Object> childMap1 = new HashMap();
+        childMap1.put("type", "answer");
+        childMap1.put("sdp", description);
+        HashMap<String, Object> childMap2 = new HashMap();
+        childMap2.put("socketId", userId);
+        childMap2.put("sdp", childMap1);
+        HashMap<String, Object> map = new HashMap();
+        map.put("eventName", "__answer");
+        map.put("data", childMap2);
         JSONObject object = new JSONObject(map);
         String jsonString = object.toString();
         Logger.json(jsonString);

@@ -11,11 +11,12 @@ public class WebRtcManager {
     private String mRoomId;
     private WebSocketManager mWebSocketManager;
     PeersConnectManager mPeersConnectManager;
-    private WebRtcManager(){
+
+    private WebRtcManager() {
 
     }
 
-    public static WebRtcManager getInstance(){
+    public static WebRtcManager getInstance() {
         return instance;
     }
 
@@ -27,16 +28,14 @@ public class WebRtcManager {
         mWebSocketManager.connect("wss://116.62.66.154/wss");
     }
 
-    public void disConnect(){
-        mWebSocketManager.disConnect();
-    }
-
-    public void startVideo(ChatRoomActivity chatRoomActivity, EglBase rootEglBase){
+    public void startVideo(ChatRoomActivity chatRoomActivity, EglBase rootEglBase) {
         mPeersConnectManager.initContext(chatRoomActivity, rootEglBase);
         mWebSocketManager.joinRoom(mRoomId);
     }
 
-    public void stopVideo(){
+    public void stopVideo() {
+//        mPeersConnectManager.closePeerConnection();//退出崩溃
+        mWebSocketManager.disConnect();
 
     }
 }

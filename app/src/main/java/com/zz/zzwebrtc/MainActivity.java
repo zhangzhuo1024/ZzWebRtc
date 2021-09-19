@@ -15,6 +15,7 @@ import org.webrtc.Logging;
 
 public class MainActivity extends AppCompatActivity {
     EditText et_room;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy));
         Logger.addLogAdapter(new AndroidLogAdapter() {
-            @Override public boolean isLoggable(int priority, String tag) {
+            @Override
+            public boolean isLoggable(int priority, String tag) {
                 return true; //BuildConfig.DEBUG 注意这里不能引用Logger中的BuildConfig，要引用自己项目的，true时打印log路径点击跳转
             }
         });

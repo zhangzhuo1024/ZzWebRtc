@@ -49,6 +49,12 @@ public class ChatRoomActivity extends Activity {
         initView();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mWebRtcManager.stopVideo();
+    }
+
     private void initView() {
         wrVideoLayout = findViewById(R.id.wr_video_view);
         wrVideoLayout.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams
@@ -109,7 +115,7 @@ public class ChatRoomActivity extends Activity {
     }
 
     public void onAddRemoteStream(MediaStream mediaStream, String userId) {
-        runOnUiThread(()->{
+        runOnUiThread(() -> {
             addRemoteView(userId, mediaStream);
         });
     }
