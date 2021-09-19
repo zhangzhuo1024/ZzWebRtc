@@ -33,7 +33,7 @@ public class WebRtcManager {
 
     public void startVideo(ChatRoomActivity chatRoomActivity, EglBase rootEglBase){
         mPeersConnectManager.initContext(chatRoomActivity, rootEglBase);
-        mWebSocketManager.startVideo(mRoomId);
+        mWebSocketManager.joinRoom(mRoomId);
     }
 
     public void stopVideo(){

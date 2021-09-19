@@ -56,6 +56,7 @@ public class PeersConnectManager {
     private boolean isVideoEnable;
     private String myId;
     private ArrayList<String> mConnectionIdList;
+    private WebSocketManager webSocketManager;
 
 
     public PeersConnectManager() {
@@ -83,6 +84,7 @@ public class PeersConnectManager {
     }
 
     public void joinRoom(WebSocketManager webSocketManager, ArrayList<String> connections, boolean isVideoEnable, String myId) {
+        this.webSocketManager = webSocketManager;
         this.isVideoEnable = isVideoEnable;
         this.myId = myId;
         mConnectionIdList.addAll(connections);
@@ -225,6 +227,16 @@ public class PeersConnectManager {
 
     }
 
+    public void onReceiverAnswer(String socketId, String sdp) {
+        executorService.execute(() -> {
+            Peer peer = mConnectionIdPeerMap.get(socketId);
+            if (peer != null) {
+                SessionDescription sessionDescription = new SessionDescription(SessionDescription.Type.ANSWER, sdp);
+                peer.peerConnection.setRemoteDescription(peer, sessionDescription);
+            }
+        });
+    }
+
     private class Peer implements SdpObserver, PeerConnection.Observer {
         private String userId;
         private PeerConnection peerConnection;
@@ -241,7 +253,7 @@ public class PeersConnectManager {
 //        peerconnection  打洞  客户端 能 1 不能2
             PeerConnection.RTCConfiguration rtcConfiguration = new PeerConnection.RTCConfiguration(ICEServers);
 
-            return factory.createPeerConnection(rtcConfiguration,  this);
+            return factory.createPeerConnection(rtcConfiguration, this);
 
         }
 
@@ -249,11 +261,19 @@ public class PeersConnectManager {
         @Override
         public void onCreateSuccess(SessionDescription sessionDescription) {
             Logger.e("onCreateSuccess = " + sessionDescription.description);
+            peerConnection.setLocalDescription(Peer.this, sessionDescription);
         }
 
         @Override
         public void onSetSuccess() {
-
+            if (peerConnection.signalingState() == PeerConnection.SignalingState.HAVE_LOCAL_OFFER) {
+                Logger.e("HAVE_LOCAL_OFFER = ");
+                webSocketManager.sendOffer(userId, peerConnection.getLocalDescription().description);
+            } else if (peerConnection.signalingState() == PeerConnection.SignalingState.HAVE_REMOTE_OFFER) {
+                Logger.e("HAVE_REMOTE_OFFER = ");
+            } else if (peerConnection.signalingState() == PeerConnection.SignalingState.STABLE) {
+                Logger.e("STABLE = ");
+            }
         }
 
         @Override
@@ -289,9 +309,11 @@ public class PeersConnectManager {
 
         }
 
+        //
         @Override
         public void onIceCandidate(IceCandidate iceCandidate) {
-
+            Logger.e("onIceCandidate = ");
+            webSocketManager.sendIceCandidate(userId, iceCandidate);
         }
 
         @Override
@@ -301,7 +323,7 @@ public class PeersConnectManager {
 
         @Override
         public void onAddStream(MediaStream mediaStream) {
-
+            mContext.onAddRemoteStream(mediaStream, userId);
         }
 
         @Override

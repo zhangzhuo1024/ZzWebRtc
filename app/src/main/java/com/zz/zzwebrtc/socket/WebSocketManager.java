@@ -1,5 +1,7 @@
 package com.zz.zzwebrtc.socket;
 
+import android.util.Log;
+
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -11,6 +13,7 @@ import com.zz.zzwebrtc.peersconnect.PeersConnectManager;
 
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
+import org.webrtc.IceCandidate;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -65,9 +68,19 @@ public class WebSocketManager {
                 Logger.d("message = " + message);
                 Map map = JSON.parseObject(message, Map.class);
                 String eventName = (String) map.get("eventName");
-                if (eventName.equals("_peers")){
+                if (eventName.equals("_peers")) {
                     handleMessage(map);
                 }
+                if (eventName.equals("_answer")) {
+                    handleAnswer(map);
+                }
+//                if (eventName.equals("_ice_candidate")) {
+//
+//                }
+//                if (eventName.equals("_offer")) {
+////                    handleOffer(map);
+//                }
+
             }
 
             @Override
@@ -95,6 +108,18 @@ public class WebSocketManager {
         mWebSocketClient.connect();
     }
 
+    private void handleAnswer(Map map) {
+        Map data = (Map) map.get("data");
+        Map sdpDic;
+        if (data != null) {
+            sdpDic = (Map) data.get("sdp");
+            String socketId = (String) data.get("socketId");
+            String sdp = (String) sdpDic.get("sdp");
+            mPeersConnectManager.onReceiverAnswer(socketId, sdp);
+        }
+    }
+
+
     private void handleMessage(Map map) {
         Map data = (Map) map.get("data");
         JSONArray arr;
@@ -104,7 +129,7 @@ public class WebSocketManager {
             ArrayList<String> connections = (ArrayList<String>) JSONObject.parseArray(js, String.class);
 
             String myId = (String) data.get("you");
-            mPeersConnectManager.joinRoom(this,connections, true, myId);
+            mPeersConnectManager.joinRoom(this, connections, true, myId);
         }
 
     }
@@ -113,7 +138,7 @@ public class WebSocketManager {
         mWebSocketClient.close();
     }
 
-    public void startVideo(String roomId) {
+    public void joinRoom(String roomId) {
 //        请求  http     socket 请求
         Map<String, Object> map = new HashMap<>();
         map.put("eventName", "__join");
@@ -124,6 +149,39 @@ public class WebSocketManager {
         final String jsonString = object.toString();
         Logger.json(jsonString);
         mWebSocketClient.send(jsonString.getBytes());
+    }
+
+    public void sendOffer(String userId, String description) {
+        HashMap<String, Object> childMap1 = new HashMap();
+        childMap1.put("type", "offer");
+        childMap1.put("sdp", description);
+
+        HashMap<String, Object> childMap2 = new HashMap();
+        childMap2.put("socketId", userId);
+        childMap2.put("sdp", childMap1);
+
+        HashMap<String, Object> map = new HashMap();
+        map.put("eventName", "__offer");
+        map.put("data", childMap2);
+        JSONObject object = new JSONObject(map);
+        String jsonString = object.toString();
+        Logger.json(jsonString);
+        mWebSocketClient.send(jsonString);
+    }
+
+    public void sendIceCandidate(String userId, IceCandidate iceCandidate) {
+        HashMap<String, Object> childMap = new HashMap();
+        childMap.put("id", iceCandidate.sdpMid);
+        childMap.put("label", iceCandidate.sdpMLineIndex);
+        childMap.put("candidate", iceCandidate.sdp);
+        childMap.put("socketId", userId);
+        HashMap<String, Object> map = new HashMap();
+        map.put("eventName", "__ice_candidate");
+        map.put("data", childMap);
+        JSONObject object = new JSONObject(map);
+        String jsonString = object.toString();
+        Logger.json(jsonString);
+        mWebSocketClient.send(jsonString);
     }
 
     private class TrustManagerTest implements X509TrustManager {

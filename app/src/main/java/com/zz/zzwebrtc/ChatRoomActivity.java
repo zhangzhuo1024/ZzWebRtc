@@ -107,4 +107,42 @@ public class ChatRoomActivity extends Activity {
             }
         }
     }
+
+    public void onAddRemoteStream(MediaStream mediaStream, String userId) {
+        runOnUiThread(()->{
+            addRemoteView(userId, mediaStream);
+        });
+    }
+
+    private void addRemoteView(String userId, MediaStream mediaStream) {
+//        不用SurfaceView  采用webrtc给我们提供的SurfaceViewRenderer
+        SurfaceViewRenderer surfaceViewRenderer = new SurfaceViewRenderer(this);
+        //        初始化SurfaceView
+        surfaceViewRenderer.init(rootEglBase.getEglBaseContext(), null);
+        surfaceViewRenderer.setScalingType(RendererCommon.ScalingType.SCALE_ASPECT_FIT);
+        surfaceViewRenderer.setMirror(true);
+//        关联
+        if (mediaStream.videoTracks.size() > 0) {
+            mediaStream.videoTracks.get(0).addSink(surfaceViewRenderer);
+        }
+        videoViews.put(userId, surfaceViewRenderer);
+        persons.add(userId);
+        wrVideoLayout.addView(surfaceViewRenderer);
+        int size = videoViews.size();
+        for (int i = 0; i < size; i++) {
+//            surfaceViewRenderer  setLayoutParams
+            String peerId = persons.get(i);
+            SurfaceViewRenderer renderer1 = videoViews.get(peerId);
+
+            if (renderer1 != null) {
+                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                layoutParams.height = Utils.getWidth(this, size);
+                layoutParams.width = Utils.getWidth(this, size);
+                layoutParams.leftMargin = Utils.getX(this, size, i);
+                layoutParams.topMargin = Utils.getY(this, size, i);
+                renderer1.setLayoutParams(layoutParams);
+            }
+        }
+    }
 }
