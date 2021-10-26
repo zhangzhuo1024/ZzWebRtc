@@ -87,6 +87,10 @@ public class WebSocketManager {
                 if (eventName.equals("_offer")) {
                     handleOffer(map);
                 }
+                //其他用户退房
+                if (eventName.equals("_remove_peer")) {
+                    handleLeave(map);
+                }
             }
 
             @Override
@@ -112,6 +116,15 @@ public class WebSocketManager {
         }
         mWebSocketClient.setReuseAddr(true);
         mWebSocketClient.connect();
+    }
+
+    private void handleLeave(Map map) {
+        Map data = (Map) map.get("data");
+        String socketId;
+        if (data != null) {
+            socketId = (String) data.get("socketId");
+            mPeersConnectManager.onRemoteLeaveRoom(socketId);
+        }
     }
 
     private void handleRemoteInRoom(Map map) {

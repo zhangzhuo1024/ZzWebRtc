@@ -34,8 +34,7 @@ public class WebRtcManager {
     }
 
     public void stopVideo() {
-//        mPeersConnectManager.closePeerConnection();//退出崩溃
+        //通知服务端退房，服务端给所有房间内成员发_remove_peer通知退房
         mWebSocketManager.disConnect();
-
     }
 }

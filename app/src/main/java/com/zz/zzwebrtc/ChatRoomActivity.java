@@ -3,13 +3,13 @@ package com.zz.zzwebrtc;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
+import com.orhanobut.logger.Logger;
 import com.zz.zzwebrtc.utils.PermissionUtil;
 import com.zz.zzwebrtc.utils.Utils;
 
@@ -96,22 +96,7 @@ public class ChatRoomActivity extends Activity {
         videoViews.put(userId, surfaceViewRenderer);
         persons.add(userId);
         wrVideoLayout.addView(surfaceViewRenderer);
-        int size = videoViews.size();
-        for (int i = 0; i < size; i++) {
-//            surfaceViewRenderer  setLayoutParams
-            String peerId = persons.get(i);
-            SurfaceViewRenderer renderer1 = videoViews.get(peerId);
-
-            if (renderer1 != null) {
-                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
-                        ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-                layoutParams.height = Utils.getWidth(this, size);
-                layoutParams.width = Utils.getWidth(this, size);
-                layoutParams.leftMargin = Utils.getX(this, size, i);
-                layoutParams.topMargin = Utils.getY(this, size, i);
-                renderer1.setLayoutParams(layoutParams);
-            }
-        }
+        resetLayoutParams();
     }
 
     public void onAddRemoteStream(MediaStream mediaStream, String userId) {
@@ -134,9 +119,12 @@ public class ChatRoomActivity extends Activity {
         videoViews.put(userId, surfaceViewRenderer);
         persons.add(userId);
         wrVideoLayout.addView(surfaceViewRenderer);
+        resetLayoutParams();
+    }
+
+    private void resetLayoutParams() {
         int size = videoViews.size();
         for (int i = 0; i < size; i++) {
-//            surfaceViewRenderer  setLayoutParams
             String peerId = persons.get(i);
             SurfaceViewRenderer renderer1 = videoViews.get(peerId);
 
@@ -149,6 +137,23 @@ public class ChatRoomActivity extends Activity {
                 layoutParams.topMargin = Utils.getY(this, size, i);
                 renderer1.setLayoutParams(layoutParams);
             }
+        }
+    }
+
+    public void removeRemoteStream(String remoteUserId) {
+        runOnUiThread(() -> {
+            removeRemoteView(remoteUserId);
+        });
+    }
+
+    public void removeRemoteView(String remoteUserId) {
+        if (videoViews.containsKey(remoteUserId)) {
+            SurfaceViewRenderer surfaceViewRenderer = videoViews.get(remoteUserId);
+            wrVideoLayout.removeView(surfaceViewRenderer);
+            videoViews.remove(remoteUserId);
+            persons.remove(remoteUserId);
+        } else {
+            Logger.e("videoViews not contains remoteUserId");
         }
     }
 }

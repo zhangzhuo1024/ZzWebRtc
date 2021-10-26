@@ -1,5 +1,7 @@
 package com.zz.zzwebrtc.peersconnect;
 
+import android.util.Log;
+
 import com.orhanobut.logger.Logger;
 import com.zz.zzwebrtc.ChatRoomActivity;
 import com.zz.zzwebrtc.socket.WebSocketManager;
@@ -314,6 +316,18 @@ public class PeersConnectManager {
         });
     }
 
+
+    public void onRemoteLeaveRoom(String remoteUserId) {
+        if (mConnectionIdList.contains(remoteUserId)) {
+            mConnectionIdList.remove(remoteUserId);
+        }
+        if (mConnectionIdPeerMap.containsKey(remoteUserId)) {
+            Peer peer = mConnectionIdPeerMap.get(remoteUserId);
+            peer.close();
+        }
+
+    }
+
     private class Peer implements SdpObserver, PeerConnection.Observer {
         private String remoteUserId;
         private PeerConnection peerConnection;
@@ -427,7 +441,16 @@ public class PeersConnectManager {
 
         }
 
+        public void close() {
+            mContext.removeRemoteStream(remoteUserId);
+            if (peerConnection != null) {
+                try {
+                    peerConnection.close();
+                } catch (Exception e) {
+                    Logger.e("Exception = " + e);
+                }
+            }
+        }
         //PeerConnection.Observer end
     }
-
 }
