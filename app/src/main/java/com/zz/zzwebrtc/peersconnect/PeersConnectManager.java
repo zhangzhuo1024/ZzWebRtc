@@ -62,12 +62,15 @@ public class PeersConnectManager {
         mConnectionIdList = new ArrayList<>();
         mConnectionIdPeerMap = new HashMap<String, Peer>();
         ICEServers = new ArrayList<>();
-        PeerConnection.IceServer iceServer1 = PeerConnection.IceServer
-                .builder("turn:116.62.66.154:3478?transport=udp")
-                .setUsername("zz")
-                .setPassword("123456")
-                .createIceServer();
-        ICEServers.add(iceServer1);
+//        PeerConnection.IceServer iceServer1 = PeerConnection.IceServer
+//                .builder("turn:116.62.66.154:3478?transport=udp")
+//                .setUsername("zz")
+//                .setPassword("123456")
+//                .createIceServer();
+//        ICEServers.add(iceServer1);
+
+        PeerConnection.IceServer iceServer = PeerConnection.IceServer.builder("stun:stun.voipbuster.com:3478").createIceServer();
+        ICEServers.add(iceServer);
     }
 
     public void initContext(ChatRoomActivity chatRoomActivity, EglBase rootEglBase) {
@@ -182,9 +185,9 @@ public class PeersConnectManager {
     }
 
     private void createPeerConnections() {
-        for (String userId : mConnectionIdList) {
-            Peer peer = new Peer(userId);
-            mConnectionIdPeerMap.put(userId, peer);
+        for (String remoteUserId : mConnectionIdList) {
+            Peer peer = new Peer(remoteUserId);
+            mConnectionIdPeerMap.put(remoteUserId, peer);
         }
     }
 
@@ -200,7 +203,7 @@ public class PeersConnectManager {
                 new MediaConstraints.KeyValuePair(AUDIO_HIGH_PASS_FILTER_CONSTRAINT, "true"));
         audioSource = factory.createAudioSource(audioConstraints);
         AudioTrack audioTrack = factory.createAudioTrack("ARDAMSa0", audioSource);
-        mediaStream.addTrack(audioTrack);
+//        mediaStream.addTrack(audioTrack);
 
 
         if (isVideoEnable) {
@@ -298,12 +301,25 @@ public class PeersConnectManager {
         });
     }
 
+    public void onRemoteJoinToRoom(String remoteUserId) {
+        executorService.execute(() -> {
+            if (mediaStream == null) {
+                //本地预览
+                addLocalStreamPreview(isVideoEnable, myId);
+            }
+            Peer peer = new Peer(remoteUserId);
+            peer.peerConnection.addStream(mediaStream);
+            mConnectionIdPeerMap.put(remoteUserId, peer);
+            mConnectionIdList.add(remoteUserId);
+        });
+    }
+
     private class Peer implements SdpObserver, PeerConnection.Observer {
-        private String userId;
+        private String remoteUserId;
         private PeerConnection peerConnection;
 
-        public Peer(String userId) {
-            this.userId = userId;
+        public Peer(String remoteUserId) {
+            this.remoteUserId = remoteUserId;
             peerConnection = createPeerConnection();
         }
 
@@ -324,21 +340,19 @@ public class PeersConnectManager {
 
         @Override
         public void onSetSuccess() {
+            Logger.e("onSetSuccess = " + peerConnection.signalingState() + "  role = " + role);
             if (peerConnection.signalingState() == PeerConnection.SignalingState.HAVE_LOCAL_OFFER) {
-                Logger.e("HAVE_LOCAL_OFFER = ");
                 if (role == Role.Caller) {
-                    webSocketManager.sendOffer(userId, peerConnection.getLocalDescription().description);
+                    webSocketManager.sendOffer(remoteUserId, peerConnection.getLocalDescription().description);
                 }
                 if (role == Role.Receiver) {
-                    webSocketManager.sendAnswer(userId, peerConnection.getLocalDescription().description);
+                    webSocketManager.sendAnswer(remoteUserId, peerConnection.getLocalDescription().description);
                 }
             } else if (peerConnection.signalingState() == PeerConnection.SignalingState.HAVE_REMOTE_OFFER) {
-                Logger.e("HAVE_REMOTE_OFFER = ");
                 peerConnection.createAnswer(Peer.this, offerAndAnswerConstraint());
             } else if (peerConnection.signalingState() == PeerConnection.SignalingState.STABLE) {
-                Logger.e("STABLE = ");
                 if (role == Role.Receiver) {
-                    webSocketManager.sendAnswer(userId, peerConnection.getLocalDescription().description);
+                    webSocketManager.sendAnswer(remoteUserId, peerConnection.getLocalDescription().description);
                 }
             }
         }
@@ -380,7 +394,7 @@ public class PeersConnectManager {
         @Override
         public void onIceCandidate(IceCandidate iceCandidate) {
             Logger.e("onIceCandidate = ");
-            webSocketManager.sendIceCandidate(userId, iceCandidate);
+            webSocketManager.sendIceCandidate(remoteUserId, iceCandidate);
         }
 
         @Override
@@ -390,7 +404,7 @@ public class PeersConnectManager {
 
         @Override
         public void onAddStream(MediaStream mediaStream) {
-            mContext.onAddRemoteStream(mediaStream, userId);
+            mContext.onAddRemoteStream(mediaStream, remoteUserId);
         }
 
         @Override

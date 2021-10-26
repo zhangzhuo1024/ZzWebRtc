@@ -1,7 +1,5 @@
 package com.zz.zzwebrtc.socket;
 
-import android.util.Log;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -68,23 +66,27 @@ public class WebSocketManager {
                 Logger.d("message = " + message);
                 Map map = JSON.parseObject(message, Map.class);
                 String eventName = (String) map.get("eventName");
-                //进入房间map.put("eventName", "__join")，收到此消息
+
+                //自己进入房间map.put("eventName", "__join")，收到此消息
                 if (eventName.equals("_peers")) {
                     handleMessage(map);
                 }
-                //给其他用户发sdp(map.put("eventName", "__offer")，他们回复sdp时收到此消息
+                //自己给其他用户发sdp(map.put("eventName", "__offer")，他们回复sdp时收到此消息
                 if (eventName.equals("_answer")) {
                     handleAnswer(map);
                 }
-                //给其他用户发送ice，他们回复或者其他用户给自己发送ice，map.put("eventName", "__ice_candidate"); 收到此消息
+                //自己给其他用户发送ice，他们回复或者其他用户给自己发送ice，map.put("eventName", "__ice_candidate"); 收到此消息
                 if (eventName.equals("_ice_candidate")) {
                     handleRemoteCandidate(map);
+                }
+                //房间有新用户进入，自己已经在房间，服务端发送此消息给自己，完成添加显示控件和初始化连接
+                if (eventName.equals("_new_peer")) {
+                    handleRemoteInRoom(map);
                 }
                 //后面进来的用户主动给自己发送的sdp
                 if (eventName.equals("_offer")) {
                     handleOffer(map);
                 }
-
             }
 
             @Override
@@ -110,6 +112,15 @@ public class WebSocketManager {
         }
         mWebSocketClient.setReuseAddr(true);
         mWebSocketClient.connect();
+    }
+
+    private void handleRemoteInRoom(Map map) {
+        Map data = (Map) map.get("data");
+        String socketId;
+        if (data != null) {
+            socketId = (String) data.get("socketId");
+            mPeersConnectManager.onRemoteJoinToRoom(socketId);
+        }
     }
 
     private void handleOffer(Map map) {
