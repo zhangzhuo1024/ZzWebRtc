@@ -40,28 +40,5 @@ map.put("eventName", "__ice_candidate");
 
 //收到远端ice之后，添加到peerConnection
 peer.pc.addIceCandidate(iceCandidate);
-//实际上，ice的回调会回调20+次，这些全部是ice协商信息，全部添加之后ice就交换完了，会回调onAddStream，在onAddStream中通过MediaStream添加view就可以显示了
-
-
-
-房间有人，自己后加入时，回调：
-2021-10-26 16:11:53.205 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onCreateSuccess = v=0
-2021-10-26 16:11:53.213 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onSetSuccess = HAVE_LOCAL_OFFER  role = Caller
-2021-10-26 16:11:53.220 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onIceCandidate = 
-。。。共13个 ice回调
-2021-10-26 16:11:53.561 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onIceCandidate = 
-2021-10-26 16:11:53.561 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onIceCandidate = 
-2021-10-26 16:11:54.649 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onSetSuccess = STABLE  role = Caller
-注意：
-onIceCandidate和onSetSuccess = STABLE回调顺序是没有先后顺序的，onSetSuccess = STABLE可能在ice回调的前中后期
-
-自己在房间，有新人加入时，回调：
-2021-10-26 16:15:54.866 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onSetSuccess = HAVE_REMOTE_OFFER  role = Receiver
-2021-10-26 16:15:54.870 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onCreateSuccess = v=0
-2021-10-26 16:15:54.907 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onSetSuccess = STABLE  role = Receiver
-2021-10-26 16:15:54.910 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onIceCandidate = 
-2021-10-26 16:15:54.910 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onIceCandidate = 
-。。。共6个 ice回调
-2021-10-26 16:15:54.911 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onIceCandidate = 
-2021-10-26 16:15:55.013 20393-26123/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onIceCandidate = 
+//实际上，ice的回调会回调13次，这些全部是ice协商信息，全部添加之后ice就交换完了，会回调onAddStream，在onAddStream中通过MediaStream添加view就可以显示了
 

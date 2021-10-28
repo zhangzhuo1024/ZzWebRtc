@@ -201,7 +201,7 @@ public class WebSocketManager {
         JSONObject object = new JSONObject(map);
         final String jsonString = object.toString();
         Logger.json(jsonString);
-        mWebSocketClient.send(jsonString.getBytes());
+        mWebSocketClient.send(jsonString);
     }
 
     public void sendOffer(String userId, String description) {

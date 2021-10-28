@@ -20,6 +20,8 @@ import org.webrtc.MediaConstraints;
 import org.webrtc.MediaStream;
 import org.webrtc.PeerConnection;
 import org.webrtc.PeerConnectionFactory;
+import org.webrtc.RTCStatsCollectorCallback;
+import org.webrtc.RTCStatsReport;
 import org.webrtc.RtpReceiver;
 import org.webrtc.SdpObserver;
 import org.webrtc.SessionDescription;
@@ -335,6 +337,13 @@ public class PeersConnectManager {
         public Peer(String remoteUserId) {
             this.remoteUserId = remoteUserId;
             peerConnection = createPeerConnection();
+
+            peerConnection.getStats(new RTCStatsCollectorCallback() {
+                @Override
+                public void onStatsDelivered(RTCStatsReport rtcStatsReport) {
+                    Log.e("eeeeee", rtcStatsReport.toString());
+                }
+            });
         }
 
         private PeerConnection createPeerConnection() {

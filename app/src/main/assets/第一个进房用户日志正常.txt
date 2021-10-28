@@ -1,0 +1,576 @@
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ onOpen
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketOpen  (WebSocketClient.java:511)
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onOpen  (WebSocketManager.java:60)
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ onOpen
+2021-10-27 20:15:07.708 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │ LaunchActivityItem.execute  (LaunchActivityItem.java:78)
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │    ActivityThread.handleLaunchActivity  (ActivityThread.java:3116)
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │       ActivityThread.performLaunchActivity  (ActivityThread.java:2946)
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "room": "6665555"
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__join"
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: main
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebRtcManager.startVideo  (WebRtcManager.java:34)
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager.joinRoom  (WebSocketManager.java:203)
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "room": "6665555"
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__join"
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:07.753 10738-10738/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.784 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.784 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:07.784 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_peers","data":{"connections":[],"you":"1d96b1e4-1841-42fa-9117-74090e910123"}}
+2021-10-27 20:15:07.784 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.784 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:07.784 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:07.784 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:07.785 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:07.785 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:07.785 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:07.785 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_peers","data":{"connections":[],"you":"1d96b1e4-1841-42fa-9117-74090e910123"}}
+2021-10-27 20:15:07.785 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.258 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.258 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_new_peer","data":{"socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_new_peer","data":{"socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.259 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.462 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.462 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.463 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_offer","data":{"sdp":{"type":"offer","sdp":"v=0\r\no=- 2430778990108379915 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE audio video\r\na=msid-semantic: WMS ARDAMS\r\nm=audio 9 UDP/TLS/RTP/SAVPF 111 103 104 9 102 0 8 106 105 13 110 112 113 126\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:7359\r\na=ice-pwd:EJns0QrDzrxmmDxjOFpMtCX2\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 9E:89:D1:37:33:F8:8A:C4:3E:71:06:DA:78:73:9B:AC:A6:41:45:C9:6A:50:11:F9:84:41:98:EE:91:D9:B0:07\r\na=setup:actpass\r\na=mid:audio\r\na=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level\r\na=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=recvonly\r\na=rtcp-mux\r\na=rtpmap:111 opus/48000/2\r\na=rtcp-fb:111 transport-cc\r\na=fmtp:111 minptime=10;useinbandfec=1\r\na=rtpmap:103 ISAC/16000\r\na=rtpmap:104 ISAC/32000\r\na=rtpmap:9 G722/8000\r\na=rtpmap:102 ILBC/8000\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:106 CN/32000\r\na=rtpmap:105 CN/16000\r\na=rtpmap:13 CN/8000\r\na=rtpmap:110 telephone-event/48000\r\na=rtpmap:112 telephone-event/32000\r\na=rtpmap:113 telephone-event/16000\r\na=rtpmap:126 telephone-event/8000\r\nm=video 9 UDP/TLS/RTP/SAVPF 96 97 98 99 100 101 127 123 125\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:7359\r\na=ice-pwd:EJns0QrDzrxmmDxjOFpMtCX2\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 9E:89:D1:37:33:F8:8A:C4:3E:71:06:DA:78:73:9B:AC:A6:41:45:C9:6A:50:11:F9:84:41:98:EE:91:D9:B0:07\r\na=setup:actpass\r\na=mid:video\r\na=extmap:14 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:13 urn:3gpp:video-orientation\r\na=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay\r\na=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type\r\na=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing\r\na=extmap:8 http://www.webrtc.org/experiments/rtp-hdrext/color-space\r\na=sendrecv\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:96 VP8/90000\r\na=rtcp-fb:96 goog-remb\r\na=rtcp-fb:96 transport-cc\r\na=rtcp-fb:96 ccm fir\r\na=rtcp-fb:96 nack\r\na=rtcp-fb:96 nack pli\r\na=rtpmap:97 rtx/90000\r\na=fmtp:97 apt=96\r\na=rtpmap:98 VP9/90000\r\na=rtcp-fb:98 goog-remb\r\na=rtcp-fb:98 transport-cc\r\na=rtcp-fb:98 ccm fir\r\na=rtcp-fb:98 nack\r\na=rtcp-fb:98 nack pli\r\na=rtpmap:99 rtx/90000\r\na=fmtp:99 apt=98\r\na=rtpmap:100 H264/90000\r\na=rtcp-fb:100 goog-remb\r\na=rtcp-fb:100 transport-cc\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=fmtp:100 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f\r\na=rtpmap:101 rtx/90000\r\na=fmtp:101 apt=100\r\na=rtpmap:127 red/90000\r\na=rtpmap:123 rtx/90000\r\na=fmtp:123 apt=127\r\na=rtpmap:125 ulpfec/90000\r\na=ssrc-group:FID 3236463361 2871142037\r\na=ssrc:3236463361 cname:/fsJMRxCJfAP8CAk\r\na=ssrc:3236463361 msid:ARDAMS ARDAMSv0\r\na=ssrc:3236463361 mslabel:ARDAMS\r\na=ssrc:3236463361 label:ARDAMSv0\r\na=ssrc:2871142037 cname:/fsJMRxCJfAP8CAk\r\na=ssrc:2871142037 msid:ARDAMS ARDAMSv0\r\na=ssrc:2871142037 mslabel:ARDAMS\r\na=ssrc:2871142037 label:ARDAMSv0\r\n"},"socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.463 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.463 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.463 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.463 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.463 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.464 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.466 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.466 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_offer","data":{"sdp":{"type":"offer","sdp":"v=0\r\no=- 2430778990108379915 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE audio video\r\na=msid-semantic: WMS ARDAMS\r\nm=audio 9 UDP/TLS/RTP/SAVPF 111 103 104 9 102 0 8 106 105 13 110 112 113 126\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:7359\r\na=ice-pwd:EJns0QrDzrxmmDxjOFpMtCX2\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 9E:89:D1:37:33:F8:8A:C4:3E:71:06:DA:78:73:9B:AC:A6:41:45:C9:6A:50:11:F9:84:41:98:EE:91:D9:B0:07\r\na=setup:actpass\r\na=mid:audio\r\na=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level\r\na=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=recvonly\r\na=rtcp-mux\r\na=rtpmap:111 opus/48000/2\r\na=rtcp-fb:111 transport-cc\r\na=fmtp:111 minptime=10;useinbandfec=1\r\na=rtpmap:103 ISAC/16000\r\na=rtpmap:104 ISAC/32000\r\na=rtpmap:9 G722/8000\r\na=rtpmap:102 ILBC/8000\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:106 CN/32000\r\na=rtpmap:105 CN/16000\r\na=rtpmap:13 CN/8000\r\na=rtpmap:110 telephone-event/48000\r\na=rtpmap:112 telephone-event/32000\r\na=rtpmap:113 telephone-event/16000\r\na=rtpmap:126 telephone-event/8000\r\nm=video 9 UDP/TLS/RTP/SAVPF 96 97 98 99 100 101 127 123 125\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:7359\r\na=ice-pwd:EJns0QrDzrxmmDxjOFpMtCX2\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 9E:89:D1:37:33:F8:8A:C4:3E:71:06:DA:78:73:9B:AC:A6:41:45:C9:6A:50:11:F9:84:41:98:EE:91:D9:B0:07\r\na=setup:actpass\r\na=mid:video\r\na=extmap:14 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:13 urn:3gpp:video-orientation\r\na=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay\r\na=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type\r\na=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing\r\na=extmap:8 http://www.webrtc.org/experiments/rtp-hdrext/color-space\r\na=sendrecv\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:96 VP8/90000\r\na=rtcp-fb:96 goog-remb\r\na=rtcp-fb:96 transport-cc\r\na=rtcp-fb:96 ccm fir\r\na=rtcp-fb:96 nack\r\na=rtcp-fb:96 nack pli\r\na=rtpmap:97 rtx/90000\r\na=fmtp:97 apt=96\r\na=rtpmap:98 VP9/90000\r\na=rtcp-fb:98 goog-remb\r\na=rtcp-fb:98 transport-cc\r\na=rtcp-fb:98 ccm fir\r\na=rtcp-fb:98 nack\r\na=rtcp-fb:98 nack pli\r\na=rtpmap:99 rtx/90000\r\na=fmtp:99 apt=98\r\na=rtpmap:100 H264/90000\r\na=rtcp-fb:100 goog-remb\r\na=rtcp-fb:100 transport-cc\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=fmtp:100 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f\r\na=rtpmap:101 rtx/90000\r\na=fmtp:101 apt=100\r\na=rtpmap:127 red/90000\r\na=rtpmap:123 rtx/90000\r\na=fmtp:123 apt=127\r\na=rtpmap:125 ulpfec/90000\r\na=ssrc-group:FID 3236463361 2871142037\r\na=ssrc:3236463361 cname:/fsJMRxCJfAP8CAk\r\na=ssrc:3236463361 msid:ARDAMS ARDAMSv0\r\na=ssrc:3236463361 mslabel:ARDAMS\r\na=ssrc:3236463361 label:ARDAMSv0\r\na=ssrc:2871142037 cname:/fsJMRxCJfAP8CAk\r\na=ssrc:2871142037 msid:ARDAMS ARDAMSv0\r\na=ssrc:2871142037 mslabel:ARDAMS\r\na=ssrc:2871142037 label:ARDAMSv0\r\n"},"socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.466 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.486 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.486 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:318855998 1 udp 2122260223 192.168.3.68 36423 typ host generation 0 ufrag 7359 network-id 3 network-cost 10","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:318855998 1 udp 2122260223 192.168.3.68 36423 typ host generation 0 ufrag 7359 network-id 3 network-cost 10","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.487 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:559267639 1 udp 2122202367 ::1 41178 typ host generation 0 ufrag 7359 network-id 2","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:559267639 1 udp 2122202367 ::1 41178 typ host generation 0 ufrag 7359 network-id 2","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.488 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.489 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:1510613869 1 udp 2122129151 127.0.0.1 36218 typ host generation 0 ufrag 7359 network-id 1","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:1510613869 1 udp 2122129151 127.0.0.1 36218 typ host generation 0 ufrag 7359 network-id 1","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.490 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onSetSuccess = HAVE_REMOTE_OFFER  role = Receiver
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ Thread: signaling_threa - 11654
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ PeersConnectManager$Peer.onSetSuccess  (PeersConnectManager.java:366)
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onSetSuccess = HAVE_REMOTE_OFFER  role = Receiver
+2021-10-27 20:15:19.490 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:318855998 1 udp 2122260223 192.168.3.68 57078 typ host generation 0 ufrag 7359 network-id 3 network-cost 10","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:318855998 1 udp 2122260223 192.168.3.68 57078 typ host generation 0 ufrag 7359 network-id 3 network-cost 10","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.491 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onCreateSuccess = v=0
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ o=- 1309356270351155623 2 IN IP4 127.0.0.1
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ s=-
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ t=0 0
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=group:BUNDLE audio video
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=msid-semantic: WMS ARDAMS
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ m=audio 9 UDP/TLS/RTP/SAVPF 111 103 104 9 102 0 8 106 105 13 110 112 113 126
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ c=IN IP4 0.0.0.0
+2021-10-27 20:15:19.492 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp:9 IN IP4 0.0.0.0
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-ufrag:DgW0
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-pwd:XEGMMOwWKHYmKlI8532Ycjmg
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-options:trickle renomination
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fingerprint:sha-256 B0:37:41:78:46:FC:34:B3:BD:63:71:D7:FF:0B:0B:F4:B3:C0:64:D8:30:A7:AF:C8:47:3B:F4:93:09:3B:A2:88
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=setup:active
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=mid:audio
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=inactive
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-mux
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:111 opus/48000/2
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:111 transport-cc
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fmtp:111 minptime=10;useinbandfec=1
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:103 ISAC/16000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:104 ISAC/32000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:9 G722/8000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:102 ILBC/8000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:0 PCMU/8000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:8 PCMA/8000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:106 CN/32000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:105 CN/16000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:13 CN/8000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:110 telephone-event/48000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:112 telephone-event/32000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:113 telephone-event/16000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:126 telephone-event/8000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ m=video 9 UDP/TLS/RTP/SAVPF 96 97 98 99 127 123 125
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ c=IN IP4 0.0.0.0
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp:9 IN IP4 0.0.0.0
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-ufrag:DgW0
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-pwd:XEGMMOwWKHYmKlI8532Ycjmg
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-options:trickle renomination
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fingerprint:sha-256 B0:37:41:78:46:FC:34:B3:BD:63:71:D7:FF:0B:0B:F4:B3:C0:64:D8:30:A7:AF:C8:47:3B:F4:93:09:3B:A2:88
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=setup:active
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=mid:video
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:14 urn:ietf:params:rtp-hdrext:toffset
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:13 urn:3gpp:video-orientation
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:8 http://www.webrtc.org/experiments/rtp-hdrext/color-space
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=sendrecv
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-mux
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-rsize
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:96 VP8/90000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 goog-remb
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 transport-cc
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 ccm fir
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 nack
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 nack pli
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:97 rtx/90000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fmtp:97 apt=96
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:98 VP9/90000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 goog-remb
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 transport-cc
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 ccm fir
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 nack
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 nack pli
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:99 rtx/90000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fmtp:99 apt=98
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:127 red/90000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:123 rtx/90000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fmtp:123 apt=127
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:125 ulpfec/90000
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc-group:FID 3667703353 1113890163
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:3667703353 cname:c3PisWPkToSC/jwp
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:3667703353 msid:ARDAMS ARDAMSv0
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:3667703353 mslabel:ARDAMS
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:3667703353 label:ARDAMSv0
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:1113890163 cname:c3PisWPkToSC/jwp
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:1113890163 msid:ARDAMS ARDAMSv0
+2021-10-27 20:15:19.493 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:1113890163 mslabel:ARDAMS
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:1113890163 label:ARDAMSv0
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ Thread: signaling_threa - 11654
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ PeersConnectManager$Peer.onCreateSuccess  (PeersConnectManager.java:360)
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onCreateSuccess = v=0
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ o=- 1309356270351155623 2 IN IP4 127.0.0.1
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ s=-
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ t=0 0
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=group:BUNDLE audio video
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=msid-semantic: WMS ARDAMS
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ m=audio 9 UDP/TLS/RTP/SAVPF 111 103 104 9 102 0 8 106 105 13 110 112 113 126
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ c=IN IP4 0.0.0.0
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp:9 IN IP4 0.0.0.0
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-ufrag:DgW0
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-pwd:XEGMMOwWKHYmKlI8532Ycjmg
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-options:trickle renomination
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fingerprint:sha-256 B0:37:41:78:46:FC:34:B3:BD:63:71:D7:FF:0B:0B:F4:B3:C0:64:D8:30:A7:AF:C8:47:3B:F4:93:09:3B:A2:88
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=setup:active
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=mid:audio
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=inactive
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-mux
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:111 opus/48000/2
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:111 transport-cc
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fmtp:111 minptime=10;useinbandfec=1
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:103 ISAC/16000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:104 ISAC/32000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:9 G722/8000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:102 ILBC/8000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:0 PCMU/8000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:8 PCMA/8000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:106 CN/32000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:105 CN/16000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:13 CN/8000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:110 telephone-event/48000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:112 telephone-event/32000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:113 telephone-event/16000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:126 telephone-event/8000
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ m=video 9 UDP/TLS/RTP/SAVPF 96 97 98 99 127 123 125
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ c=IN IP4 0.0.0.0
+2021-10-27 20:15:19.494 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp:9 IN IP4 0.0.0.0
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-ufrag:DgW0
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-pwd:XEGMMOwWKHYmKlI8532Ycjmg
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ice-options:trickle renomination
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fingerprint:sha-256 B0:37:41:78:46:FC:34:B3:BD:63:71:D7:FF:0B:0B:F4:B3:C0:64:D8:30:A7:AF:C8:47:3B:F4:93:09:3B:A2:88
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=setup:active
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=mid:video
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:14 urn:ietf:params:rtp-hdrext:toffset
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:13 urn:3gpp:video-orientation
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=extmap:8 http://www.webrtc.org/experiments/rtp-hdrext/color-space
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=sendrecv
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-mux
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-rsize
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:96 VP8/90000
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 goog-remb
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 transport-cc
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 ccm fir
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 nack
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:96 nack pli
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:97 rtx/90000
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fmtp:97 apt=96
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:98 VP9/90000
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 goog-remb
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 transport-cc
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 ccm fir
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 nack
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtcp-fb:98 nack pli
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:99 rtx/90000
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fmtp:99 apt=98
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:127 red/90000
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:123 rtx/90000
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=fmtp:123 apt=127
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=rtpmap:125 ulpfec/90000
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc-group:FID 3667703353 1113890163
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:3667703353 cname:c3PisWPkToSC/jwp
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:3667703353 msid:ARDAMS ARDAMSv0
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:3667703353 mslabel:ARDAMS
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:3667703353 label:ARDAMSv0
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:1113890163 cname:c3PisWPkToSC/jwp
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:1113890163 msid:ARDAMS ARDAMSv0
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:1113890163 mslabel:ARDAMS
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ a=ssrc:1113890163 label:ARDAMSv0
+2021-10-27 20:15:19.495 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.526 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onSetSuccess = STABLE  role = Receiver
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ Thread: signaling_threa - 11654
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ PeersConnectManager$Peer.onSetSuccess  (PeersConnectManager.java:366)
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: │ onSetSuccess = STABLE  role = Receiver
+2021-10-27 20:15:19.527 10738-11654/com.zz.zzwebrtc E/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "sdp": {
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │       "type": "answer",
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │       "sdp": "v=0\r\no=- 1309356270351155623 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE audio video\r\na=msid-semantic: WMS ARDAMS\r\nm=audio 9 UDP\/TLS\/RTP\/SAVPF 111 103 104 9 102 0 8 106 105 13 110 112 113 126\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:DgW0\r\na=ice-pwd:XEGMMOwWKHYmKlI8532Ycjmg\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 B0:37:41:78:46:FC:34:B3:BD:63:71:D7:FF:0B:0B:F4:B3:C0:64:D8:30:A7:AF:C8:47:3B:F4:93:09:3B:A2:88\r\na=setup:active\r\na=mid:audio\r\na=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level\r\na=extmap:2 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/abs-send-time\r\na=extmap:3 http:\/\/www.ietf.org\/id\/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=inactive\r\na=rtcp-mux\r\na=rtpmap:111 opus\/48000\/2\r\na=rtcp-fb:111 transport-cc\r\na=fmtp:111 minptime=10;useinbandfec=1\r\na=rtpmap:103 ISAC\/16000\r\na=rtpmap:104 ISAC\/32000\r\na=rtpmap:9 G722\/8000\r\na=rtpmap:102 ILBC\/8000\r\na=rtpmap:0 PCMU\/8000\r\na=rtpmap:8 PCMA\/8000\r\na=rtpmap:106 CN\/32000\r\na=rtpmap:105 CN\/16000\r\na=rtpmap:13 CN\/8000\r\na=rtpmap:110 telephone-event\/48000\r\na=rtpmap:112 telephone-event\/32000\r\na=rtpmap:113 telephone-event\/16000\r\na=rtpmap:126 telephone-event\/8000\r\nm=video 9 UDP\/TLS\/RTP\/SAVPF 96 97 98 99 127 123 125\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:DgW0\r\na=ice-pwd:XEGMMOwWKHYmKlI8532Ycjmg\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 B0:37:41:78:46:FC:34:B3:BD:63:71:D7:FF:0B:0B:F4:B3:C0:64:D8:30:A7:AF:C8:47:3B:F4:93:09:3B:A2:88\r\na=setup:active\r\na=mid:video\r\na=extmap:14 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:2 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/abs-send-time\r\na=extmap:13 urn:3gpp:video-orientation\r\na=extmap:3 http:\/\/www.ietf.org\/id\/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:5 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/playout-delay\r\na=extmap:6 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/video-content-type\r\na=extmap:7 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/video-timing\r\na=extmap:8 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/color-space\r\na=sendrecv\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:96 VP8\/90000\r\na=rtcp-fb:96 goog-remb\r\na=rtcp-fb:96 transport-cc\r\na=rtcp-fb:96 ccm fir\r\na=rtcp-fb:96 nack\r\na=rtcp-fb:96 nack pli\r\na=rtpmap:97 rtx\/90000\r\na=fmtp:97 apt=96\r\na=rtpmap:98 VP9\/90000\r\na=rtcp-fb:98 goog-remb\r\na=rtcp-fb:98 transport-cc\r\na=rtcp-fb:98 ccm fir\r\na=rtcp-fb:98 nack\r\na=rtcp-fb:98 nack pli\r\na=rtpmap:99 rtx\/90000\r\na=fmtp:99 apt=98\r\na=rtpmap:127 red\/90000\r\na=rtpmap:123 rtx\/90000\r\na=fmtp:123 apt=127\r\na=rtpmap:125 ulpfec\/90000\r\na=ssrc-group:FID 3667703353 1113890163\r\na=ssrc:3667703353 cname:c3PisWPkToSC\/jwp\r\na=ssrc:3667703353 msid:ARDAMS ARDAMSv0\r\na=ssrc:3667703353 mslabel:ARDAMS\r\na=ssrc:3667703353 label:ARDAMSv0\r\na=ssrc:1113890163 cname:c3PisWPkToSC\/jwp\r\na=ssrc:1113890163 msid:ARDAMS ARDAMSv0\r\na=ssrc:1113890163 mslabel:ARDAMS\r\na=ssrc:1113890163 label:ARDAMSv0\r\n"
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     }
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__answer"
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: signaling_threa - 11654
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ PeersConnectManager$Peer.onSetSuccess  (PeersConnectManager.java:378)
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager.sendAnswer  (WebSocketManager.java:252)
+2021-10-27 20:15:19.529 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "sdp": {
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │       "type": "answer",
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │       "sdp": "v=0\r\no=- 1309356270351155623 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE audio video\r\na=msid-semantic: WMS ARDAMS\r\nm=audio 9 UDP\/TLS\/RTP\/SAVPF 111 103 104 9 102 0 8 106 105 13 110 112 113 126\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:DgW0\r\na=ice-pwd:XEGMMOwWKHYmKlI8532Ycjmg\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 B0:37:41:78:46:FC:34:B3:BD:63:71:D7:FF:0B:0B:F4:B3:C0:64:D8:30:A7:AF:C8:47:3B:F4:93:09:3B:A2:88\r\na=setup:active\r\na=mid:audio\r\na=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level\r\na=extmap:2 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/abs-send-time\r\na=extmap:3 http:\/\/www.ietf.org\/id\/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=inactive\r\na=rtcp-mux\r\na=rtpmap:111 opus\/48000\/2\r\na=rtcp-fb:111 transport-cc\r\na=fmtp:111 minptime=10;useinbandfec=1\r\na=rtpmap:103 ISAC\/16000\r\na=rtpmap:104 ISAC\/32000\r\na=rtpmap:9 G722\/8000\r\na=rtpmap:102 ILBC\/8000\r\na=rtpmap:0 PCMU\/8000\r\na=rtpmap:8 PCMA\/8000\r\na=rtpmap:106 CN\/32000\r\na=rtpmap:105 CN\/16000\r\na=rtpmap:13 CN\/8000\r\na=rtpmap:110 telephone-event\/48000\r\na=rtpmap:112 telephone-event\/32000\r\na=rtpmap:113 telephone-event\/16000\r\na=rtpmap:126 telephone-event\/8000\r\nm=video 9 UDP\/TLS\/RTP\/SAVPF 96 97 98 99 127 123 125\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:DgW0\r\na=ice-pwd:XEGMMOwWKHYmKlI8532Ycjmg\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 B0:37:41:78:46:FC:34:B3:BD:63:71:D7:FF:0B:0B:F4:B3:C0:64:D8:30:A7:AF:C8:47:3B:F4:93:09:3B:A2:88\r\na=setup:active\r\na=mid:video\r\na=extmap:14 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:2 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/abs-send-time\r\na=extmap:13 urn:3gpp:video-orientation\r\na=extmap:3 http:\/\/www.ietf.org\/id\/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:5 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/playout-delay\r\na=extmap:6 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/video-content-type\r\na=extmap:7 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/video-timing\r\na=extmap:8 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/color-space\r\na=sendrecv\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:96 VP8\/90000\r\na=rtcp-fb:96 goog-remb\r\na=rtcp-fb:96 transport-cc\r\na=rtcp-fb:96 ccm fir\r\na=rtcp-fb:96 nack\r\na=rtcp-fb:96 nack pli\r\na=rtpmap:97 rtx\/90000\r\na=fmtp:97 apt=96\r\na=rtpmap:98 VP9\/90000\r\na=rtcp-fb:98 goog-remb\r\na=rtcp-fb:98 transport-cc\r\na=rtcp-fb:98 ccm fir\r\na=rtcp-fb:98 nack\r\na=rtcp-fb:98 nack pli\r\na=rtpmap:99 rtx\/90000\r\na=fmtp:99 apt=98\r\na=rtpmap:127 red\/90000\r\na=rtpmap:123 rtx\/90000\r\na=fmtp:123 apt=127\r\na=rtpmap:125 ulpfec\/90000\r\na=ssrc-group:FID 3667703353 1113890163\r\na=ssrc:3667703353 cname:c3PisWPkToSC\/jwp\r\na=ssrc:3667703353 msid:ARDAMS ARDAMSv0\r\na=ssrc:3667703353 mslabel:ARDAMS\r\na=ssrc:3667703353 label:ARDAMSv0\r\na=ssrc:1113890163 cname:c3PisWPkToSC\/jwp\r\na=ssrc:1113890163 msid:ARDAMS ARDAMSv0\r\na=ssrc:1113890163 mslabel:ARDAMS\r\na=ssrc:1113890163 label:ARDAMSv0\r\n"
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     }
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__answer"
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.530 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.532 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.532 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.532 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.532 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.532 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.532 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:1667085099 1 udp 2122260223 192.168.3.39 60090 typ host generation 0 ufrag DgW0 network-id 3 network-cost 10",
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: signaling_threa - 11654
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄���┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ PeersConnectManager$Peer.onIceCandidate  (PeersConnectManager.java:420)
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager.sendIceCandidate  (WebSocketManager.java:236)
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:1667085099 1 udp 2122260223 192.168.3.39 60090 typ host generation 0 ufrag DgW0 network-id 3 network-cost 10",
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.533 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:559267639 1 udp 2122202367 ::1 45351 typ host generation 0 ufrag DgW0 network-id 2",
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: signaling_threa - 11654
+2021-10-27 20:15:19.534 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ PeersConnectManager$Peer.onIceCandidate  (PeersConnectManager.java:420)
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager.sendIceCandidate  (WebSocketManager.java:236)
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:559267639 1 udp 2122202367 ::1 45351 typ host generation 0 ufrag DgW0 network-id 2",
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.535 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:1510613869 1 udp 2122129151 127.0.0.1 36616 typ host generation 0 ufrag DgW0 network-id 1",
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: signaling_threa - 11654
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ PeersConnectManager$Peer.onIceCandidate  (PeersConnectManager.java:420)
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager.sendIceCandidate  (WebSocketManager.java:236)
+2021-10-27 20:15:19.536 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:1510613869 1 udp 2122129151 127.0.0.1 36616 typ host generation 0 ufrag DgW0 network-id 1",
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.537 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.550 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.550 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.550 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:559267639 1 udp 2122202367 ::1 40112 typ host generation 0 ufrag 7359 network-id 2","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.550 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.550 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.550 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.551 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.551 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.551 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.551 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.551 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:559267639 1 udp 2122202367 ::1 40112 typ host generation 0 ufrag 7359 network-id 2","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.551 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:1510613869 1 udp 2122129151 127.0.0.1 40153 typ host generation 0 ufrag 7359 network-id 1","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:1510613869 1 udp 2122129151 127.0.0.1 40153 typ host generation 0 ufrag 7359 network-id 1","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.552 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:1876313031 1 tcp 1518222591 ::1 54260 typ host tcptype passive generation 0 ufrag 7359 network-id 2","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:1876313031 1 tcp 1518222591 ::1 54260 typ host tcptype passive generation 0 ufrag 7359 network-id 2","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.575 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.577 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.577 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.577 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:344579997 1 tcp 1518149375 127.0.0.1 44290 typ host tcptype passive generation 0 ufrag 7359 network-id 1","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.577 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.577 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.577 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.577 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.578 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.578 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.578 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.578 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:344579997 1 tcp 1518149375 127.0.0.1 44290 typ host tcptype passive generation 0 ufrag 7359 network-id 1","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.578 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:1876313031 1 tcp 1518222591 ::1 56497 typ host tcptype passive generation 0 ufrag 7359 network-id 2","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:1876313031 1 tcp 1518222591 ::1 56497 typ host tcptype passive generation 0 ufrag 7359 network-id 2","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.597 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.598 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.598 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.598 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:344579997 1 tcp 1518149375 127.0.0.1 58273 typ host tcptype passive generation 0 ufrag 7359 network-id 1","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.598 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.599 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.599 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.599 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.599 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.599 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.599 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.599 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"video","label":1,"sdpMLineIndex":1,"candidate":"candidate:344579997 1 tcp 1518149375 127.0.0.1 58273 typ host tcptype passive generation 0 ufrag 7359 network-id 1","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.599 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.633 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:1876313031 1 tcp 1518222591 ::1 55385 typ host tcptype passive generation 0 ufrag DgW0 network-id 2",
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: signaling_threa - 11654
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ PeersConnectManager$Peer.onIceCandidate  (PeersConnectManager.java:420)
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager.sendIceCandidate  (WebSocketManager.java:236)
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:1876313031 1 tcp 1518222591 ::1 55385 typ host tcptype passive generation 0 ufrag DgW0 network-id 2",
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.634 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:344579997 1 tcp 1518149375 127.0.0.1 42763 typ host tcptype passive generation 0 ufrag DgW0 network-id 1",
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: signaling_threa - 11654
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ PeersConnectManager$Peer.onIceCandidate  (PeersConnectManager.java:420)
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager.sendIceCandidate  (WebSocketManager.java:236)
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ {
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "data": {
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "socketId": "761125a6-501f-48b1-9e5c-728583a741ec",
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "candidate": "candidate:344579997 1 tcp 1518149375 127.0.0.1 42763 typ host tcptype passive generation 0 ufrag DgW0 network-id 1",
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "id": "audio",
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │     "label": 0
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   },
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │   "eventName": "__ice_candidate"
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: │ }
+2021-10-27 20:15:19.636 10738-11654/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:842163049 1 udp 1686052607 223.76.222.59 36423 typ srflx raddr 192.168.3.68 rport 36423 generation 0 ufrag 7359 network-id 3 network-cost 10","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ Thread: WebSocketConnectReadThread-48613
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ WebSocketClient.onWebsocketMessage  (WebSocketClient.java:492)
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │    WebSocketManager$1.onMessage  (WebSocketManager.java:66)
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: │ message = {"eventName":"_ice_candidate","data":{"id":"audio","label":0,"sdpMLineIndex":0,"candidate":"candidate:842163049 1 udp 1686052607 223.76.222.59 36423 typ srflx raddr 192.168.3.68 rport 36423 generation 0 ufrag 7359 network-id 3 network-cost 10","socketId":"761125a6-501f-48b1-9e5c-728583a741ec"}}
+2021-10-27 20:15:19.762 10738-11646/com.zz.zzwebrtc D/PRETTY_LOGGER: └────────────────────────────────────────────────────────────────────────────────────────────────────────────────

@@ -26,6 +26,7 @@ public class WebRtcManager {
         mPeersConnectManager = new PeersConnectManager();
         mWebSocketManager = new WebSocketManager(mainActivity, mPeersConnectManager);
         mWebSocketManager.connect("wss://116.62.66.154/wss");
+//        mWebSocketManager.connect("ws://116.62.66.154:7001/p2p");
     }
 
     public void startVideo(ChatRoomActivity chatRoomActivity, EglBase rootEglBase) {
