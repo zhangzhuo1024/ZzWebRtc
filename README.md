@@ -42,3 +42,12 @@ map.put("eventName", "__ice_candidate");
 peer.pc.addIceCandidate(iceCandidate);
 //实际上，ice的回调会回调13次，这些全部是ice协商信息，全部添加之后ice就交换完了，会回调onAddStream，在onAddStream中通过MediaStream添加view就可以显示了
 
+本地预览逻辑：
+mediaStream = factory.createLocalMediaStream("ARDAMS");
+videoSource = factory.createVideoSource(videoCapturer.isScreencast());
+VideoTrack videoTrack = factory.createVideoTrack("ARDAMSv0", videoSource);
+mediaStream.addTrack(videoTrack);
+
+aceViewRenderer surfaceViewRenderer = new SurfaceViewRenderer(this);
+mediaStream.videoTracks.get(0).addSink(surfaceViewRenderer);
+wrVideoLayout.addView(surfaceViewRenderer);

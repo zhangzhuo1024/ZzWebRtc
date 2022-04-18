@@ -49,7 +49,7 @@ public class PeersConnectManager {
     private WebSocketManager webSocketManager;
     private ExecutorService executorService;
     private PeerConnectionFactory factory;
-    private ChatRoomActivity mContext;
+    private ChatRoomActivity mChatRoomActivity;
     private MediaStream mediaStream;
     private EglBase mEglBase;
     private String myId;
@@ -78,7 +78,7 @@ public class PeersConnectManager {
     }
 
     public void initContext(ChatRoomActivity chatRoomActivity, EglBase rootEglBase) {
-        mContext = chatRoomActivity;
+        mChatRoomActivity = chatRoomActivity;
         mEglBase = rootEglBase;
     }
 
@@ -211,8 +211,8 @@ public class PeersConnectManager {
 
 
         if (isVideoEnable) {
-            if (Camera2Enumerator.isSupported(mContext)) {
-                Camera2Enumerator camera2Enumerator = new Camera2Enumerator(mContext);
+            if (Camera2Enumerator.isSupported(mChatRoomActivity)) {
+                Camera2Enumerator camera2Enumerator = new Camera2Enumerator(mChatRoomActivity);
                 videoCapturer = createCameraCapture(camera2Enumerator);
             } else {
                 Camera1Enumerator enumerator = new Camera1Enumerator(true);
@@ -220,13 +220,12 @@ public class PeersConnectManager {
             }
             videoSource = factory.createVideoSource(videoCapturer.isScreencast());
             SurfaceTextureHelper surfaceTextureHelper = SurfaceTextureHelper.create("CaptureThread", mEglBase.getEglBaseContext());
-            videoCapturer.initialize(surfaceTextureHelper, mContext, videoSource.getCapturerObserver());
+            videoCapturer.initialize(surfaceTextureHelper, mChatRoomActivity, videoSource.getCapturerObserver());
             videoCapturer.startCapture(320, 240, 10);
             VideoTrack videoTrack = factory.createVideoTrack("ARDAMSv0", videoSource);
             mediaStream.addTrack(videoTrack);
-
-            if (mContext != null) {
-                mContext.onSetLocalStream(mediaStream, myId);
+            if (mChatRoomActivity != null) {
+                mChatRoomActivity.onSetLocalStream(mediaStream, myId);
             }
         }
     }
@@ -259,10 +258,10 @@ public class PeersConnectManager {
 
     private PeerConnectionFactory createPeerConnectionFactory() {
 
-        PeerConnectionFactory.initialize(PeerConnectionFactory.InitializationOptions.builder(mContext).createInitializationOptions());
+        PeerConnectionFactory.initialize(PeerConnectionFactory.InitializationOptions.builder(mChatRoomActivity).createInitializationOptions());
         DefaultVideoEncoderFactory defaultVideoEncoderFactory = new DefaultVideoEncoderFactory(mEglBase.getEglBaseContext(), true, true);
         DefaultVideoDecoderFactory defaultVideoDecoderFactory = new DefaultVideoDecoderFactory(mEglBase.getEglBaseContext());
-        JavaAudioDeviceModule audioDeviceModule = JavaAudioDeviceModule.builder(mContext).createAudioDeviceModule();
+        JavaAudioDeviceModule audioDeviceModule = JavaAudioDeviceModule.builder(mChatRoomActivity).createAudioDeviceModule();
         PeerConnectionFactory.Options options = new PeerConnectionFactory.Options();
 
         PeerConnectionFactory peerConnectionFactory = PeerConnectionFactory.builder()
@@ -427,7 +426,7 @@ public class PeersConnectManager {
 
         @Override
         public void onAddStream(MediaStream mediaStream) {
-            mContext.onAddRemoteStream(mediaStream, remoteUserId);
+            mChatRoomActivity.onAddRemoteStream(mediaStream, remoteUserId);
         }
 
         @Override
@@ -451,7 +450,7 @@ public class PeersConnectManager {
         }
 
         public void close() {
-            mContext.removeRemoteStream(remoteUserId);
+            mChatRoomActivity.removeRemoteStream(remoteUserId);
             if (peerConnection != null) {
                 try {
                     peerConnection.close();
