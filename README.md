@@ -42,12 +42,38 @@ map.put("eventName", "__ice_candidate");
 peer.pc.addIceCandidate(iceCandidate);
 //实际上，ice的回调会回调13次，这些全部是ice协商信息，全部添加之后ice就交换完了，会回调onAddStream，在onAddStream中通过MediaStream添加view就可以显示了
 
-本地预览逻辑：
+
+音视频联通的核心在于：
+mediaStream：负责本地视频获取、预览
+peerConnection：负责本地与远端的信息交换，通道打通
+通道打通后，就可以获取到对方的mediaStream，用来展示对方的画面
+如A和B两个用户进行视频连接：
+A和B通信，A要为B建立一个peerConnection，B也要为A建立一个peerConnection，A要建立mediaStream用来自己展示，并把展示内容添加到peerConnection
+B也要建立mediaStream用来自己展示，并把内容添加到peerConnection。A的peerConnection新建后要设置自己的sdp，并把sdp通过websocket发送给B，B建立后也要设置自己的sdp并发送给A，
+A、B两端收到对方的sdp后，分别设置到自己的peerConnection中，然后进行ice协商，过程同sdp；完成协商后，在各自的peerConnection中会回调onAddStream，并在里面提供
+对方的mediaStream，这样就可以渲染对方的画面了
+
+
+一、本地预览逻辑：
 mediaStream = factory.createLocalMediaStream("ARDAMS");
 videoSource = factory.createVideoSource(videoCapturer.isScreencast());
 VideoTrack videoTrack = factory.createVideoTrack("ARDAMSv0", videoSource);
 mediaStream.addTrack(videoTrack);
 
+aceViewRenderer surfaceViewRenderer = new SurfaceViewRenderer(this);
+mediaStream.videoTracks.get(0).addSink(surfaceViewRenderer);
+wrVideoLayout.addView(surfaceViewRenderer);
+
+二、远端预览逻辑：
+1、先建立连接
+本地对远端用户的逻辑处理：
+在本地为每个远端用户创建一个peerConnection，如远端用户一，并把本地的mediaStream设置进去，peerConnection.addStream(mMediaStream);
+创建好peerConnection后会生成sdp，把这个sdp设置到本地通道，并通过socket发送给对应的远端用户,远端用户自己也生成mediaStream和预览
+远端用户把收到的sdp设置进来，并把自己的生成的sdp设置到自己的peerConnection，再发送出去；信息协商完成后，本地持有的远端用户一的peerConnection会回调onAddStream
+并在参数中把远端的mediaStream传过来
+
+2、完成渲染
+有了远端用户的mediaStream，再给他建立view，进行展示
 aceViewRenderer surfaceViewRenderer = new SurfaceViewRenderer(this);
 mediaStream.videoTracks.get(0).addSink(surfaceViewRenderer);
 wrVideoLayout.addView(surfaceViewRenderer);

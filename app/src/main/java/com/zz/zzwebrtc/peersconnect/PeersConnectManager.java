@@ -46,23 +46,23 @@ public class PeersConnectManager {
     private ArrayList<PeerConnection.IceServer> ICEServerList;
     private ArrayList<String> mConnectionIdList;
     private HashMap<String, Peer> mConnectionIdPeerMap;
-    private WebSocketManager webSocketManager;
-    private ExecutorService executorService;
-    private PeerConnectionFactory factory;
+    private WebSocketManager mWebSocketManager;
+    private ExecutorService mExecutorService;
+    private PeerConnectionFactory mFactory;
     private ChatRoomActivity mChatRoomActivity;
-    private MediaStream mediaStream;
+    private MediaStream mMediaStream;
     private EglBase mEglBase;
     private String myId;
-    private boolean isVideoEnable;
-    private Role role;
-    private AudioSource audioSource;
-    private VideoSource videoSource;
-    private VideoCapturer videoCapturer;
+    private boolean mIsVideoEnable;
+    private Role mRole;
+    private AudioSource mAudioSource;
+    private VideoSource mVideoSource;
+    private VideoCapturer mVideoCapture;
 
     enum Role {Caller, Receiver}
 
     public PeersConnectManager() {
-        executorService = Executors.newSingleThreadExecutor();
+        mExecutorService = Executors.newSingleThreadExecutor();
         mConnectionIdList = new ArrayList<>();
         mConnectionIdPeerMap = new HashMap<String, Peer>();
         ICEServers = new ArrayList<>();
@@ -83,20 +83,20 @@ public class PeersConnectManager {
     }
 
     public void joinRoom(WebSocketManager webSocketManager, ArrayList<String> connections, boolean isVideoEnable, String myId) {
-        this.webSocketManager = webSocketManager;
-        this.isVideoEnable = isVideoEnable;
+        this.mWebSocketManager = webSocketManager;
+        this.mIsVideoEnable = isVideoEnable;
         this.myId = myId;
         mConnectionIdList.addAll(connections);
 
-        executorService.execute(new Runnable() {
+        mExecutorService.execute(new Runnable() {
             @Override
             public void run() {
-                if (factory == null) {
-                    factory = createPeerConnectionFactory();
+                if (mFactory == null) {
+                    mFactory = createPeerConnectionFactory();
                 }
 
                 //本地预览
-                if (mediaStream == null) {
+                if (mMediaStream == null) {
                     addLocalStreamPreview(isVideoEnable, myId);
                 }
 
@@ -113,7 +113,7 @@ public class PeersConnectManager {
     }
 
     public void closePeerConnection() {
-        executorService.execute(() -> {
+        mExecutorService.execute(() -> {
             if (null != mConnectionIdPeerMap) {
                 for (String s : mConnectionIdPeerMap.keySet()) {
                     Peer peer = mConnectionIdPeerMap.get(s);
@@ -128,36 +128,36 @@ public class PeersConnectManager {
                     }
                 }
                 mConnectionIdPeerMap.clear();
-                if (null != audioSource) {//释放音频资源
-                    audioSource.dispose();
-                    audioSource = null;
+                if (null != mAudioSource) {//释放音频资源
+                    mAudioSource.dispose();
+                    mAudioSource = null;
                 }
-                if (null != videoSource) {//释放视频资源
-                    videoSource.dispose();
-                    videoSource = null;
+                if (null != mVideoSource) {//释放视频资源
+                    mVideoSource.dispose();
+                    mVideoSource = null;
                 }
-                if (videoCapturer != null) {//释放画面
+                if (mVideoCapture != null) {//释放画面
                     try {
-                        videoCapturer.stopCapture();
+                        mVideoCapture.stopCapture();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    videoCapturer.dispose();
-                    videoCapturer = null;
+                    mVideoCapture.dispose();
+                    mVideoCapture = null;
                 }
 
-                if (mediaStream != null) {
-                    mediaStream.dispose();
-                    mediaStream = null;
+                if (mMediaStream != null) {
+                    mMediaStream.dispose();
+                    mMediaStream = null;
                 }
                 if (mEglBase != null) {
                     mEglBase.release();
                     mEglBase = null;
                 }
-                if (null != factory) {//释放掉PeerConnecttionFactroy
-                    factory.stopAecDump();
-                    factory.dispose();
-                    factory = null;
+                if (null != mFactory) {//释放掉PeerConnecttionFactroy
+                    mFactory.stopAecDump();
+                    mFactory.dispose();
+                    mFactory = null;
                 }
             }
         });
@@ -165,7 +165,7 @@ public class PeersConnectManager {
 
     private void sendOffers() {
         for (Map.Entry<String, Peer> stringPeerEntry : mConnectionIdPeerMap.entrySet()) {
-            role = Role.Caller;
+            mRole = Role.Caller;
             Peer peer = stringPeerEntry.getValue();
             //给每个房间的人发送offer，结果在第一个参数peer中回调
             peer.peerConnection.createOffer(peer, offerAndAnswerConstraint());
@@ -176,15 +176,14 @@ public class PeersConnectManager {
         MediaConstraints mediaConstraints = new MediaConstraints();
         ArrayList<MediaConstraints.KeyValuePair> keyValuePairs = new ArrayList<>();
         keyValuePairs.add(new MediaConstraints.KeyValuePair("OfferToReceiveAudio", "true"));
-        keyValuePairs.add(new MediaConstraints.KeyValuePair("OfferToReceiveVideo", String.valueOf(isVideoEnable)));
+        keyValuePairs.add(new MediaConstraints.KeyValuePair("OfferToReceiveVideo", String.valueOf(mIsVideoEnable)));
         mediaConstraints.mandatory.addAll(keyValuePairs);
         return mediaConstraints;
     }
 
     private void addRemoteStream() {
-
         for (Map.Entry<String, Peer> stringPeerEntry : mConnectionIdPeerMap.entrySet()) {
-            stringPeerEntry.getValue().peerConnection.addStream(mediaStream);
+            stringPeerEntry.getValue().peerConnection.addStream(mMediaStream);
         }
     }
 
@@ -196,7 +195,7 @@ public class PeersConnectManager {
     }
 
     private void addLocalStreamPreview(boolean isVideoEnable, String myId) {
-        mediaStream = factory.createLocalMediaStream("ARDAMS");
+        mMediaStream = mFactory.createLocalMediaStream("ARDAMS");
         MediaConstraints audioConstraints = new MediaConstraints();
         audioConstraints.mandatory.add(new MediaConstraints.KeyValuePair(AUDIO_ECHO_CANCELLATION_CONSTRAINT, "true"));
         audioConstraints.mandatory.add(
@@ -205,27 +204,26 @@ public class PeersConnectManager {
                 new MediaConstraints.KeyValuePair(AUDIO_AUTO_GAIN_CONTROL_CONSTRAINT, "false"));
         audioConstraints.mandatory.add(
                 new MediaConstraints.KeyValuePair(AUDIO_HIGH_PASS_FILTER_CONSTRAINT, "true"));
-        audioSource = factory.createAudioSource(audioConstraints);
-        AudioTrack audioTrack = factory.createAudioTrack("ARDAMSa0", audioSource);
+        mAudioSource = mFactory.createAudioSource(audioConstraints);
+        AudioTrack audioTrack = mFactory.createAudioTrack("ARDAMSa0", mAudioSource);
 //        mediaStream.addTrack(audioTrack);
-
 
         if (isVideoEnable) {
             if (Camera2Enumerator.isSupported(mChatRoomActivity)) {
                 Camera2Enumerator camera2Enumerator = new Camera2Enumerator(mChatRoomActivity);
-                videoCapturer = createCameraCapture(camera2Enumerator);
+                mVideoCapture = createCameraCapture(camera2Enumerator);
             } else {
                 Camera1Enumerator enumerator = new Camera1Enumerator(true);
-                videoCapturer = createCameraCapture(enumerator);
+                mVideoCapture = createCameraCapture(enumerator);
             }
-            videoSource = factory.createVideoSource(videoCapturer.isScreencast());
+            mVideoSource = mFactory.createVideoSource(mVideoCapture.isScreencast());
             SurfaceTextureHelper surfaceTextureHelper = SurfaceTextureHelper.create("CaptureThread", mEglBase.getEglBaseContext());
-            videoCapturer.initialize(surfaceTextureHelper, mChatRoomActivity, videoSource.getCapturerObserver());
-            videoCapturer.startCapture(320, 240, 10);
-            VideoTrack videoTrack = factory.createVideoTrack("ARDAMSv0", videoSource);
-            mediaStream.addTrack(videoTrack);
+            mVideoCapture.initialize(surfaceTextureHelper, mChatRoomActivity, mVideoSource.getCapturerObserver());
+            mVideoCapture.startCapture(320, 240, 10);
+            VideoTrack videoTrack = mFactory.createVideoTrack("ARDAMSv0", mVideoSource);
+            mMediaStream.addTrack(videoTrack);
             if (mChatRoomActivity != null) {
-                mChatRoomActivity.onSetLocalStream(mediaStream, myId);
+                mChatRoomActivity.onSetLocalStream(mMediaStream, myId);
             }
         }
     }
@@ -251,13 +249,10 @@ public class PeersConnectManager {
                 }
             }
         }
-
         return null;
-
     }
 
     private PeerConnectionFactory createPeerConnectionFactory() {
-
         PeerConnectionFactory.initialize(PeerConnectionFactory.InitializationOptions.builder(mChatRoomActivity).createInitializationOptions());
         DefaultVideoEncoderFactory defaultVideoEncoderFactory = new DefaultVideoEncoderFactory(mEglBase.getEglBaseContext(), true, true);
         DefaultVideoDecoderFactory defaultVideoDecoderFactory = new DefaultVideoDecoderFactory(mEglBase.getEglBaseContext());
@@ -271,11 +266,10 @@ public class PeersConnectManager {
                 .setVideoDecoderFactory(defaultVideoDecoderFactory)
                 .createPeerConnectionFactory();
         return peerConnectionFactory;
-
     }
 
     public void onReceiverAnswer(String socketId, String sdp) {
-        executorService.execute(() -> {
+        mExecutorService.execute(() -> {
             Peer peer = mConnectionIdPeerMap.get(socketId);
             if (peer != null) {
                 SessionDescription sessionDescription = new SessionDescription(SessionDescription.Type.ANSWER, sdp);
@@ -285,7 +279,7 @@ public class PeersConnectManager {
     }
 
     public void onRemoteIceCandidate(String socketId, IceCandidate iceCandidate) {
-        executorService.execute(() -> {
+        mExecutorService.execute(() -> {
             Peer peer = mConnectionIdPeerMap.get(socketId);
             if (peer != null) {
                 peer.peerConnection.addIceCandidate(iceCandidate);
@@ -294,8 +288,8 @@ public class PeersConnectManager {
     }
 
     public void onReceiveOffer(String socketId, String sdp) {
-        executorService.execute(() -> {
-            role = Role.Receiver;
+        mExecutorService.execute(() -> {
+            mRole = Role.Receiver;
             Peer peer = mConnectionIdPeerMap.get(socketId);
             if (peer != null) {
                 SessionDescription sessionDescription = new SessionDescription(SessionDescription.Type.OFFER, sdp);
@@ -305,13 +299,13 @@ public class PeersConnectManager {
     }
 
     public void onRemoteJoinToRoom(String remoteUserId) {
-        executorService.execute(() -> {
-            if (mediaStream == null) {
+        mExecutorService.execute(() -> {
+            if (mMediaStream == null) {
                 //本地预览
-                addLocalStreamPreview(isVideoEnable, myId);
+                addLocalStreamPreview(mIsVideoEnable, myId);
             }
             Peer peer = new Peer(remoteUserId);
-            peer.peerConnection.addStream(mediaStream);
+            peer.peerConnection.addStream(mMediaStream);
             mConnectionIdPeerMap.put(remoteUserId, peer);
             mConnectionIdList.add(remoteUserId);
         });
@@ -346,11 +340,11 @@ public class PeersConnectManager {
         }
 
         private PeerConnection createPeerConnection() {
-            if (factory == null) {
-                factory = createPeerConnectionFactory();
+            if (mFactory == null) {
+                mFactory = createPeerConnectionFactory();
             }
             PeerConnection.RTCConfiguration rtcConfiguration = new PeerConnection.RTCConfiguration(ICEServers);
-            return factory.createPeerConnection(rtcConfiguration, this);
+            return mFactory.createPeerConnection(rtcConfiguration, this);
         }
 
         // SDP 回调  start
@@ -362,19 +356,19 @@ public class PeersConnectManager {
 
         @Override
         public void onSetSuccess() {
-            Logger.e("onSetSuccess = " + peerConnection.signalingState() + "  role = " + role);
+            Logger.e("onSetSuccess = " + peerConnection.signalingState() + "  role = " + mRole);
             if (peerConnection.signalingState() == PeerConnection.SignalingState.HAVE_LOCAL_OFFER) {
-                if (role == Role.Caller) {
-                    webSocketManager.sendOffer(remoteUserId, peerConnection.getLocalDescription().description);
+                if (mRole == Role.Caller) {
+                    mWebSocketManager.sendOffer(remoteUserId, peerConnection.getLocalDescription().description);
                 }
-                if (role == Role.Receiver) {
-                    webSocketManager.sendAnswer(remoteUserId, peerConnection.getLocalDescription().description);
+                if (mRole == Role.Receiver) {
+                    mWebSocketManager.sendAnswer(remoteUserId, peerConnection.getLocalDescription().description);
                 }
             } else if (peerConnection.signalingState() == PeerConnection.SignalingState.HAVE_REMOTE_OFFER) {
                 peerConnection.createAnswer(Peer.this, offerAndAnswerConstraint());
             } else if (peerConnection.signalingState() == PeerConnection.SignalingState.STABLE) {
-                if (role == Role.Receiver) {
-                    webSocketManager.sendAnswer(remoteUserId, peerConnection.getLocalDescription().description);
+                if (mRole == Role.Receiver) {
+                    mWebSocketManager.sendAnswer(remoteUserId, peerConnection.getLocalDescription().description);
                 }
             }
         }
@@ -416,7 +410,7 @@ public class PeersConnectManager {
         @Override
         public void onIceCandidate(IceCandidate iceCandidate) {
             Logger.e("onIceCandidate = ");
-            webSocketManager.sendIceCandidate(remoteUserId, iceCandidate);
+            mWebSocketManager.sendIceCandidate(remoteUserId, iceCandidate);
         }
 
         @Override
